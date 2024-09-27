@@ -2,29 +2,27 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Feeder f = new Feeder();
-        System.out.println(f);
-        System.out.println(f.getCurrentFood());
-        //System.out.println(f.currentFood);
-        
-        Feeder g = new Feeder(500);
-        System.out.println(g.getCurrentFood());
-        
-        int random = (int)(Math.random() * 10 + 1);
-        System.out.println(random);
-        g.simulateOneDay(12);
-        System.out.println(g.getCurrentFood());
-
-        Feeder h = new Feeder(1000);
-        h.simulateOneDay(22);
-        System.out.println(h.getCurrentFood());
-
-        Feeder i = new Feeder(100);
-        i.simulateOneDay(5);
-        System.out.println(i);
-
-        Feeder j = new Feeder(2400);
-        System.out.println(j.simulateManyDays(10, 4));
+        //Test Case 1
+        Feeder a = new Feeder(500);
+        a.simulateOneDay(12);
+        System.out.println(a);
+        //Test Case 2
+        Feeder b = new Feeder(1000);
+        b.simulateOneDay(22);
+        System.out.println(b);
+        //Test Case 3
+        Feeder c = new Feeder(100);
+        c.simulateOneDay(5);
+        System.out.println(c);
+        //Test Case 4
+        Feeder f = new Feeder(2400);
+        System.out.println(f.simulateManyDays(10, 4));
+        //Test Case 5
+        Feeder k = new Feeder(250);
+        System.out.println(k.simulateManyDays(10, 5));
+        //Test Case 6
+        Feeder g = new Feeder(0);
+        System.out.println(g.simulateManyDays(5, 10));
     }
 
 }
